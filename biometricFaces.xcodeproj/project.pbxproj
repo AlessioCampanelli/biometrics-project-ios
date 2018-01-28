@@ -1,0 +1,798 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A49692B45FA8DA03F4C21FC /* Pods_biometricFacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB8A4D105C45A83DDA1B7DC /* Pods_biometricFacesTests.framework */; };
+		8B380A7A1FF39BA100ACB364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B380A791FF39BA100ACB364 /* AppDelegate.swift */; };
+		8B380A7C1FF39BA100ACB364 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B380A7B1FF39BA100ACB364 /* ViewController.swift */; };
+		8B380A7F1FF39BA100ACB364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B380A7D1FF39BA100ACB364 /* Main.storyboard */; };
+		8B380A811FF39BA100ACB364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B380A801FF39BA100ACB364 /* Assets.xcassets */; };
+		8B380A841FF39BA100ACB364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B380A821FF39BA100ACB364 /* LaunchScreen.storyboard */; };
+		8B380A8F1FF39BA100ACB364 /* biometricFacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B380A8E1FF39BA100ACB364 /* biometricFacesTests.swift */; };
+		8B380A9A1FF39BA100ACB364 /* biometricFacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B380A991FF39BA100ACB364 /* biometricFacesUITests.swift */; };
+		8B69C050201BDC03003034C4 /* HttpServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */; };
+		8B6FA0A7201BD7170037BEC9 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FA0A6201BD7170037BEC9 /* TakePhotoViewController.swift */; };
+		8BD8D368201E70160022274F /* FaceRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD8D367201E70160022274F /* FaceRecognitionViewController.swift */; };
+		8BD8D36B201E7C070022274F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD8D36A201E7C070022274F /* Constants.swift */; };
+		C370CFD853AA3F88D67B128D /* Pods_biometricFaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30275D682BB2E3CDC586B039 /* Pods_biometricFaces.framework */; };
+		EA4E98CCB11B9FE7644DD3C6 /* Pods_biometricFacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4166935943E2759BE994F10 /* Pods_biometricFacesUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B380A8B1FF39BA100ACB364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B380A6E1FF39BA100ACB364 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B380A751FF39BA100ACB364;
+			remoteInfo = biometricFaces;
+		};
+		8B380A961FF39BA100ACB364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B380A6E1FF39BA100ACB364 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B380A751FF39BA100ACB364;
+			remoteInfo = biometricFaces;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03C12CFD3108307DD59DBEF4 /* Pods-biometricFacesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biometricFacesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-biometricFacesTests/Pods-biometricFacesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30275D682BB2E3CDC586B039 /* Pods_biometricFaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_biometricFaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7712945A5690EE21C7BFA5EA /* Pods-biometricFacesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biometricFacesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-biometricFacesUITests/Pods-biometricFacesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86A9B14DDBA0BA81C918F722 /* Pods-biometricFacesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biometricFacesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-biometricFacesUITests/Pods-biometricFacesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B380A761FF39BA100ACB364 /* biometricFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biometricFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B380A791FF39BA100ACB364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B380A7B1FF39BA100ACB364 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B380A7E1FF39BA100ACB364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B380A801FF39BA100ACB364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B380A831FF39BA100ACB364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B380A851FF39BA100ACB364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B380A8A1FF39BA100ACB364 /* biometricFacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = biometricFacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B380A8E1FF39BA100ACB364 /* biometricFacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricFacesTests.swift; sourceTree = "<group>"; };
+		8B380A901FF39BA100ACB364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B380A951FF39BA100ACB364 /* biometricFacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = biometricFacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B380A991FF39BA100ACB364 /* biometricFacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricFacesUITests.swift; sourceTree = "<group>"; };
+		8B380A9B1FF39BA100ACB364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceHelper.swift; sourceTree = "<group>"; };
+		8B6FA0A6201BD7170037BEC9 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
+		8BD8D367201E70160022274F /* FaceRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionViewController.swift; sourceTree = "<group>"; };
+		8BD8D36A201E7C070022274F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9DB8A4D105C45A83DDA1B7DC /* Pods_biometricFacesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_biometricFacesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA99BA0ECAEE7DD4F88CC060 /* Pods-biometricFacesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biometricFacesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-biometricFacesTests/Pods-biometricFacesTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4166935943E2759BE994F10 /* Pods_biometricFacesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_biometricFacesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE178E87AFFDF90F9EF5598 /* Pods-biometricFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biometricFaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-biometricFaces/Pods-biometricFaces.debug.xcconfig"; sourceTree = "<group>"; };
+		F204B0E8284D7CD2684C70F4 /* Pods-biometricFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biometricFaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-biometricFaces/Pods-biometricFaces.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B380A731FF39BA100ACB364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C370CFD853AA3F88D67B128D /* Pods_biometricFaces.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B380A871FF39BA100ACB364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A49692B45FA8DA03F4C21FC /* Pods_biometricFacesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B380A921FF39BA100ACB364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA4E98CCB11B9FE7644DD3C6 /* Pods_biometricFacesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B380A6D1FF39BA100ACB364 = {
+			isa = PBXGroup;
+			children = (
+				8BD8D36A201E7C070022274F /* Constants.swift */,
+				8B380A781FF39BA100ACB364 /* biometricFaces */,
+				8B380A8D1FF39BA100ACB364 /* biometricFacesTests */,
+				8B380A981FF39BA100ACB364 /* biometricFacesUITests */,
+				8B380A771FF39BA100ACB364 /* Products */,
+				9FA02EAC9A63470FF1076044 /* Pods */,
+				8D2DC3186FEF3FCE14FF1A04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8B380A771FF39BA100ACB364 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B380A761FF39BA100ACB364 /* biometricFaces.app */,
+				8B380A8A1FF39BA100ACB364 /* biometricFacesTests.xctest */,
+				8B380A951FF39BA100ACB364 /* biometricFacesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B380A781FF39BA100ACB364 /* biometricFaces */ = {
+			isa = PBXGroup;
+			children = (
+				8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */,
+				8BD8D36C201E7C790022274F /* views */,
+				8B6FA0A5201BD6FE0037BEC9 /* controllers */,
+				8B380A791FF39BA100ACB364 /* AppDelegate.swift */,
+				8B380A801FF39BA100ACB364 /* Assets.xcassets */,
+				8B380A821FF39BA100ACB364 /* LaunchScreen.storyboard */,
+				8B380A851FF39BA100ACB364 /* Info.plist */,
+			);
+			path = biometricFaces;
+			sourceTree = "<group>";
+		};
+		8B380A8D1FF39BA100ACB364 /* biometricFacesTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B380A8E1FF39BA100ACB364 /* biometricFacesTests.swift */,
+				8B380A901FF39BA100ACB364 /* Info.plist */,
+			);
+			path = biometricFacesTests;
+			sourceTree = "<group>";
+		};
+		8B380A981FF39BA100ACB364 /* biometricFacesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B380A991FF39BA100ACB364 /* biometricFacesUITests.swift */,
+				8B380A9B1FF39BA100ACB364 /* Info.plist */,
+			);
+			path = biometricFacesUITests;
+			sourceTree = "<group>";
+		};
+		8B6FA0A5201BD6FE0037BEC9 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B380A7B1FF39BA100ACB364 /* ViewController.swift */,
+				8B6FA0A6201BD7170037BEC9 /* TakePhotoViewController.swift */,
+				8BD8D367201E70160022274F /* FaceRecognitionViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		8BD8D36C201E7C790022274F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8B380A7D1FF39BA100ACB364 /* Main.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		8D2DC3186FEF3FCE14FF1A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30275D682BB2E3CDC586B039 /* Pods_biometricFaces.framework */,
+				9DB8A4D105C45A83DDA1B7DC /* Pods_biometricFacesTests.framework */,
+				D4166935943E2759BE994F10 /* Pods_biometricFacesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FA02EAC9A63470FF1076044 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBE178E87AFFDF90F9EF5598 /* Pods-biometricFaces.debug.xcconfig */,
+				F204B0E8284D7CD2684C70F4 /* Pods-biometricFaces.release.xcconfig */,
+				03C12CFD3108307DD59DBEF4 /* Pods-biometricFacesTests.debug.xcconfig */,
+				AA99BA0ECAEE7DD4F88CC060 /* Pods-biometricFacesTests.release.xcconfig */,
+				86A9B14DDBA0BA81C918F722 /* Pods-biometricFacesUITests.debug.xcconfig */,
+				7712945A5690EE21C7BFA5EA /* Pods-biometricFacesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B380A751FF39BA100ACB364 /* biometricFaces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B380A9E1FF39BA100ACB364 /* Build configuration list for PBXNativeTarget "biometricFaces" */;
+			buildPhases = (
+				2C0294D4BA3F815E8807127A /* [CP] Check Pods Manifest.lock */,
+				8B380A721FF39BA100ACB364 /* Sources */,
+				8B380A731FF39BA100ACB364 /* Frameworks */,
+				8B380A741FF39BA100ACB364 /* Resources */,
+				3E841C750908AE4CB6807B56 /* [CP] Embed Pods Frameworks */,
+				35815B69B83A3E9315A395F5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = biometricFaces;
+			productName = biometricFaces;
+			productReference = 8B380A761FF39BA100ACB364 /* biometricFaces.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B380A891FF39BA100ACB364 /* biometricFacesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B380AA11FF39BA100ACB364 /* Build configuration list for PBXNativeTarget "biometricFacesTests" */;
+			buildPhases = (
+				DB3B1186EA0494B468350557 /* [CP] Check Pods Manifest.lock */,
+				8B380A861FF39BA100ACB364 /* Sources */,
+				8B380A871FF39BA100ACB364 /* Frameworks */,
+				8B380A881FF39BA100ACB364 /* Resources */,
+				074EB5EFED7DEF75E728DFDF /* [CP] Embed Pods Frameworks */,
+				39B975E5B66F5A1076DB0E65 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B380A8C1FF39BA100ACB364 /* PBXTargetDependency */,
+			);
+			name = biometricFacesTests;
+			productName = biometricFacesTests;
+			productReference = 8B380A8A1FF39BA100ACB364 /* biometricFacesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B380A941FF39BA100ACB364 /* biometricFacesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B380AA41FF39BA100ACB364 /* Build configuration list for PBXNativeTarget "biometricFacesUITests" */;
+			buildPhases = (
+				09865B36B740297D9C88CD68 /* [CP] Check Pods Manifest.lock */,
+				8B380A911FF39BA100ACB364 /* Sources */,
+				8B380A921FF39BA100ACB364 /* Frameworks */,
+				8B380A931FF39BA100ACB364 /* Resources */,
+				0A4E935B64FCDB1F822F32AF /* [CP] Embed Pods Frameworks */,
+				77F06F27649FD6924DABE129 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B380A971FF39BA100ACB364 /* PBXTargetDependency */,
+			);
+			name = biometricFacesUITests;
+			productName = biometricFacesUITests;
+			productReference = 8B380A951FF39BA100ACB364 /* biometricFacesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B380A6E1FF39BA100ACB364 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alessio Campanelli";
+				TargetAttributes = {
+					8B380A751FF39BA100ACB364 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8B380A891FF39BA100ACB364 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8B380A751FF39BA100ACB364;
+					};
+					8B380A941FF39BA100ACB364 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8B380A751FF39BA100ACB364;
+					};
+				};
+			};
+			buildConfigurationList = 8B380A711FF39BA100ACB364 /* Build configuration list for PBXProject "biometricFaces" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B380A6D1FF39BA100ACB364;
+			productRefGroup = 8B380A771FF39BA100ACB364 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B380A751FF39BA100ACB364 /* biometricFaces */,
+				8B380A891FF39BA100ACB364 /* biometricFacesTests */,
+				8B380A941FF39BA100ACB364 /* biometricFacesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B380A741FF39BA100ACB364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B380A841FF39BA100ACB364 /* LaunchScreen.storyboard in Resources */,
+				8B380A811FF39BA100ACB364 /* Assets.xcassets in Resources */,
+				8B380A7F1FF39BA100ACB364 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B380A881FF39BA100ACB364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B380A931FF39BA100ACB364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		074EB5EFED7DEF75E728DFDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biometricFacesTests/Pods-biometricFacesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		09865B36B740297D9C88CD68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-biometricFacesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A4E935B64FCDB1F822F32AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biometricFacesUITests/Pods-biometricFacesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C0294D4BA3F815E8807127A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-biometricFaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35815B69B83A3E9315A395F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biometricFaces/Pods-biometricFaces-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39B975E5B66F5A1076DB0E65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biometricFacesTests/Pods-biometricFacesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E841C750908AE4CB6807B56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-biometricFaces/Pods-biometricFaces-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biometricFaces/Pods-biometricFaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77F06F27649FD6924DABE129 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biometricFacesUITests/Pods-biometricFacesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB3B1186EA0494B468350557 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-biometricFacesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B380A721FF39BA100ACB364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B380A7C1FF39BA100ACB364 /* ViewController.swift in Sources */,
+				8B6FA0A7201BD7170037BEC9 /* TakePhotoViewController.swift in Sources */,
+				8B380A7A1FF39BA100ACB364 /* AppDelegate.swift in Sources */,
+				8BD8D368201E70160022274F /* FaceRecognitionViewController.swift in Sources */,
+				8B69C050201BDC03003034C4 /* HttpServiceHelper.swift in Sources */,
+				8BD8D36B201E7C070022274F /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B380A861FF39BA100ACB364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B380A8F1FF39BA100ACB364 /* biometricFacesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B380A911FF39BA100ACB364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B380A9A1FF39BA100ACB364 /* biometricFacesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B380A8C1FF39BA100ACB364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B380A751FF39BA100ACB364 /* biometricFaces */;
+			targetProxy = 8B380A8B1FF39BA100ACB364 /* PBXContainerItemProxy */;
+		};
+		8B380A971FF39BA100ACB364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B380A751FF39BA100ACB364 /* biometricFaces */;
+			targetProxy = 8B380A961FF39BA100ACB364 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B380A7D1FF39BA100ACB364 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B380A7E1FF39BA100ACB364 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B380A821FF39BA100ACB364 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B380A831FF39BA100ACB364 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B380A9C1FF39BA100ACB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B380A9D1FF39BA100ACB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B380A9F1FF39BA100ACB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE178E87AFFDF90F9EF5598 /* Pods-biometricFaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSBR4VCBZ8;
+				INFOPLIST_FILE = biometricFaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFaces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B380AA01FF39BA100ACB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F204B0E8284D7CD2684C70F4 /* Pods-biometricFaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSBR4VCBZ8;
+				INFOPLIST_FILE = biometricFaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFaces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B380AA21FF39BA100ACB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C12CFD3108307DD59DBEF4 /* Pods-biometricFacesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = biometricFacesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFacesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/biometricFaces.app/biometricFaces";
+			};
+			name = Debug;
+		};
+		8B380AA31FF39BA100ACB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA99BA0ECAEE7DD4F88CC060 /* Pods-biometricFacesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = biometricFacesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFacesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/biometricFaces.app/biometricFaces";
+			};
+			name = Release;
+		};
+		8B380AA51FF39BA100ACB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A9B14DDBA0BA81C918F722 /* Pods-biometricFacesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = biometricFacesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFacesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = biometricFaces;
+			};
+			name = Debug;
+		};
+		8B380AA61FF39BA100ACB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7712945A5690EE21C7BFA5EA /* Pods-biometricFacesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = biometricFacesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFacesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = biometricFaces;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B380A711FF39BA100ACB364 /* Build configuration list for PBXProject "biometricFaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B380A9C1FF39BA100ACB364 /* Debug */,
+				8B380A9D1FF39BA100ACB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B380A9E1FF39BA100ACB364 /* Build configuration list for PBXNativeTarget "biometricFaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B380A9F1FF39BA100ACB364 /* Debug */,
+				8B380AA01FF39BA100ACB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B380AA11FF39BA100ACB364 /* Build configuration list for PBXNativeTarget "biometricFacesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B380AA21FF39BA100ACB364 /* Debug */,
+				8B380AA31FF39BA100ACB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B380AA41FF39BA100ACB364 /* Build configuration list for PBXNativeTarget "biometricFacesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B380AA51FF39BA100ACB364 /* Debug */,
+				8B380AA61FF39BA100ACB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B380A6E1FF39BA100ACB364 /* Project object */;
+}
