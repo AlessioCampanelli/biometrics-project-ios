@@ -11,6 +11,9 @@ import Alamofire
 
 class HttpServiceHelper: NSObject {
     
+    var username: String = ""
+    static let sharedInstance = HttpServiceHelper()
+    
     func sendPhoto(myPhoto: UIImage, username: String, count: Int, url: String, onCompletion:@escaping (Any)-> Void) {
         
         let imgData = UIImageJPEGRepresentation(myPhoto, 0.2)!
@@ -18,7 +21,7 @@ class HttpServiceHelper: NSObject {
         let parameters = ["username": username]
         
         Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imgData, withName: "image",fileName: username + String(count) + ".jpg", mimeType: "image/jpg")  // fileset
+            multipartFormData.append(imgData, withName: "image",fileName: username + String(count) + ".jpg", mimeType: "image/jpg")  
             
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)

@@ -54,10 +54,11 @@ class FaceRecognitionViewController: UIViewController, UINavigationControllerDel
         
         imagePicker.dismiss(animated: true, completion: nil)
         
-        httpServiceHelper = HttpServiceHelper();
+        //httpServiceHelper = HttpServiceHelper();
         //httpServiceHelper.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: "alessio", count: 4, url: BASE_URL + "doFaceRecognition")
         
-        httpServiceHelper.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: "alessio", count: 4, url: BASE_URL + END_POINT_FACE_RECOGNITION) { (response) in
+        let currentUsername = HttpServiceHelper.sharedInstance.username
+        HttpServiceHelper.sharedInstance.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: currentUsername, count: 4, url: BASE_URL + END_POINT_FACE_RECOGNITION) { (response) in
             
             
         }

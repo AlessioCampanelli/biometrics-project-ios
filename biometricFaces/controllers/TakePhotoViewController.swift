@@ -54,8 +54,6 @@ class TakePhotoViewController: UIViewController, UINavigationControllerDelegate,
         imagePicker.dismiss(animated: true, completion: nil)
         imageTake.image = info[UIImagePickerControllerOriginalImage] as? UIImage;
         
-        httpServiceHelper = HttpServiceHelper();
-        
         var endPoint = END_POINT_SEND_PHOTOS
         if(count == 4) {
             endPoint = END_POINT_FACE_RECOGNITION
@@ -63,7 +61,8 @@ class TakePhotoViewController: UIViewController, UINavigationControllerDelegate,
         
         //httpServiceHelper.sendPhoto(myPhoto: imageTake.image!, username: "alessio", count: count, url: BASE_URL + endPoint)
         
-        httpServiceHelper.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: "alessio", count: count, url: BASE_URL + endPoint) { (response) in
+        let currentUsername = HttpServiceHelper.sharedInstance.username
+        HttpServiceHelper.sharedInstance.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: currentUsername, count: count, url: BASE_URL + endPoint) { (response) in
             
             
             self.count = self.count + 1

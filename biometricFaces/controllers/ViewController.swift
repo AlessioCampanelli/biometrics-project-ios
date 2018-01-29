@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,10 +28,17 @@ class ViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
+        HttpServiceHelper.sharedInstance.username = self.usernameTextField.text!
+        
         if(segue.identifier == "faceRecognitionSegue") {
             let faceRecognitionVC :FaceRecognitionViewController = segue.destination as! FaceRecognitionViewController
             faceRecognitionVC.username = usernameTextField.text
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.usernameTextField.resignFirstResponder()
+        return true
     }
 }
 
