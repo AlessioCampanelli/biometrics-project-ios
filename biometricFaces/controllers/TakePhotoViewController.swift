@@ -13,11 +13,16 @@ class TakePhotoViewController: UIViewController, UINavigationControllerDelegate,
 
     var imagePicker: UIImagePickerController!
     @IBOutlet weak var imageTake: UIImageView!
+    
+    @IBOutlet weak var buttonTakeASelfie: UIButton!
+    
     var httpServiceHelper: HttpServiceHelper!
     var count: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.takePhoto(self.buttonTakeASelfie)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,22 +35,12 @@ class TakePhotoViewController: UIViewController, UINavigationControllerDelegate,
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
+        imagePicker.cameraDevice = .front
         present(imagePicker, animated: true, completion: nil)
     }
     
     //MARK: - Add image to Library
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        
-        /*if let error = error {
-            // we got back an error!
-            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-        } else {
-            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-        } */
     }
     
     //MARK: - Done image capture here
@@ -59,24 +54,28 @@ class TakePhotoViewController: UIViewController, UINavigationControllerDelegate,
             endPoint = END_POINT_FACE_RECOGNITION
         }
         
-        //httpServiceHelper.sendPhoto(myPhoto: imageTake.image!, username: "alessio", count: count, url: BASE_URL + endPoint)
-        
         let currentUsername = HttpServiceHelper.sharedInstance.username
-        HttpServiceHelper.sharedInstance.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: currentUsername, count: count, url: BASE_URL + endPoint) { (response) in
+        let myPhoto = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        let imageData =  UIImageJPEGRepresentation(myPhoto, 0.2)!
+        
+        HttpServiceHelper.sharedInstance.sendData(myData: imageData, username: currentUsername, count: count, url: BASE_URL + endPoint, namingFile:nil) { (response) in
             
+            if(self.count == 4) {   //photo for recognition face
+                let alert = UIAlertController(title: "Good!", message: "Now your face is registered!!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+                return;
+            }
             
-            self.count = self.count + 1
+             let alert = UIAlertController(title: "Configuration", message: "photo n° \(self.count) correctly acquired. \n Take another photo please!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                self.count = self.count + 1
+                self.takePhoto(self.buttonTakeASelfie)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

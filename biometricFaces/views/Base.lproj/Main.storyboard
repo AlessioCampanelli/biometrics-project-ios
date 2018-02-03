@@ -116,10 +116,142 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8ck-80-YB9"/>
                     </view>
+                    <connections>
+                        <segue destination="Uso-2K-CFA" kind="show" identifier="showDocumentSegue" id="5E5-X7-swn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuy-eK-e0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1474" y="-214"/>
+        </scene>
+        <!--Doc Manager View Controller-->
+        <scene sceneID="FeZ-zO-BeQ">
+            <objects>
+                <viewController id="Uso-2K-CFA" customClass="DocManagerViewController" customModule="biometricFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b9k-Qp-ohr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u13-GL-0El">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="docCell" rowHeight="76" id="SVY-tl-jYT" customClass="DocTableViewCell" customModule="biometricFaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SVY-tl-jYT" id="iZ7-LI-JWP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="file" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-bR-iOj">
+                                                    <rect key="frame" x="15" y="22.5" width="28" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="6AX-id-mPB"/>
+                                                        <constraint firstAttribute="width" constant="28" id="hwf-0f-mMw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prova.pdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMb-WJ-owX">
+                                                    <rect key="frame" x="60" y="27.5" width="245" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d7h-bR-iOj" firstAttribute="centerY" secondItem="iZ7-LI-JWP" secondAttribute="centerY" id="8Hh-tp-WW0"/>
+                                                <constraint firstItem="d7h-bR-iOj" firstAttribute="leading" secondItem="iZ7-LI-JWP" secondAttribute="leading" constant="15" id="WsQ-i5-MX3"/>
+                                                <constraint firstItem="oMb-WJ-owX" firstAttribute="centerY" secondItem="d7h-bR-iOj" secondAttribute="centerY" id="czL-d5-7ak"/>
+                                                <constraint firstItem="oMb-WJ-owX" firstAttribute="leading" secondItem="d7h-bR-iOj" secondAttribute="trailing" constant="17" id="e5C-xH-NLb"/>
+                                                <constraint firstAttribute="trailing" secondItem="oMb-WJ-owX" secondAttribute="trailing" constant="15" id="nZ6-EF-wuK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleDoc" destination="oMb-WJ-owX" id="lZ8-VN-yue"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addDocButtonCell" rowHeight="67" id="4aN-Tx-gkt" customClass="AddDocButtonTableViewCell" customModule="biometricFaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4aN-Tx-gkt" id="KAj-0U-edt">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="66.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17A-28-xTi">
+                                                    <rect key="frame" x="15" y="18" width="290" height="30"/>
+                                                    <color key="backgroundColor" red="0.61080938579999999" green="0.80990976100000001" blue="0.35785168410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Aggiungi documento">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="17A-28-xTi" secondAttribute="trailing" constant="15" id="8df-qE-cjZ"/>
+                                                <constraint firstItem="17A-28-xTi" firstAttribute="centerY" secondItem="KAj-0U-edt" secondAttribute="centerY" id="IFl-MK-KKt"/>
+                                                <constraint firstItem="17A-28-xTi" firstAttribute="leading" secondItem="KAj-0U-edt" secondAttribute="leading" constant="15" id="tVd-Jh-xKf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addDocButton" destination="17A-28-xTi" id="JEm-UR-r8g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uso-2K-CFA" id="Y6g-Wl-dh1"/>
+                                    <outlet property="delegate" destination="Uso-2K-CFA" id="Njz-Fc-6hE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u13-GL-0El" firstAttribute="leading" secondItem="VxR-BS-574" secondAttribute="leading" id="ENr-kp-l9Z"/>
+                            <constraint firstItem="u13-GL-0El" firstAttribute="bottom" secondItem="VxR-BS-574" secondAttribute="bottom" id="hLw-tz-vpd"/>
+                            <constraint firstItem="u13-GL-0El" firstAttribute="trailing" secondItem="VxR-BS-574" secondAttribute="trailing" id="o0S-6H-oP5"/>
+                            <constraint firstItem="u13-GL-0El" firstAttribute="top" secondItem="VxR-BS-574" secondAttribute="top" id="ssD-2V-F8a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VxR-BS-574"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewDoc" destination="u13-GL-0El" id="uiG-oe-bbN"/>
+                        <segue destination="Oy2-oB-qVb" kind="show" identifier="showDetailDoc" id="Ua4-mW-kQP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2W3-9W-emK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2503" y="-211"/>
+        </scene>
+        <!--Detail Doc View Controller-->
+        <scene sceneID="jtF-x3-wx0">
+            <objects>
+                <viewController id="Oy2-oB-qVb" customClass="DetailDocViewController" customModule="biometricFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yQH-tS-4LU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nZ-Rk-pzB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8nZ-Rk-pzB" firstAttribute="bottom" secondItem="RiK-ff-XTm" secondAttribute="bottom" id="1om-2Q-QV8"/>
+                            <constraint firstItem="8nZ-Rk-pzB" firstAttribute="leading" secondItem="RiK-ff-XTm" secondAttribute="leading" id="3nu-oa-E4K"/>
+                            <constraint firstItem="8nZ-Rk-pzB" firstAttribute="top" secondItem="yQH-tS-4LU" secondAttribute="top" id="FU1-l2-ruc"/>
+                            <constraint firstItem="8nZ-Rk-pzB" firstAttribute="trailing" secondItem="RiK-ff-XTm" secondAttribute="trailing" id="dwy-ey-5HU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RiK-ff-XTm"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailDocWebView" destination="8nZ-Rk-pzB" id="81a-X9-Zu1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPt-ZT-kQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3309.375" y="-211.26760563380282"/>
         </scene>
         <!--Take Photo View Controller-->
         <scene sceneID="6dX-J5-8JX">
@@ -159,6 +291,7 @@
                         <viewLayoutGuide key="safeArea" id="zhY-Mw-nLB"/>
                     </view>
                     <connections>
+                        <outlet property="buttonTakeASelfie" destination="tGM-MG-3Wb" id="22d-Ac-oij"/>
                         <outlet property="imageTake" destination="MYT-5F-Q2N" id="lxJ-DA-W9D"/>
                     </connections>
                 </viewController>
@@ -187,6 +320,7 @@
     </scenes>
     <resources>
         <image name="face" width="94" height="104"/>
+        <image name="file" width="49" height="61"/>
         <image name="unlock" width="56" height="66"/>
     </resources>
 </document>

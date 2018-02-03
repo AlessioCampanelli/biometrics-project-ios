@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class FaceRecognitionViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -31,22 +32,12 @@ class FaceRecognitionViewController: UIViewController, UINavigationControllerDel
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
+        imagePicker.cameraDevice = .front
         present(imagePicker, animated: true, completion: nil)
     }
     
     //MARK: - Add image to Library
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        
-        /*if let error = error {
-         // we got back an error!
-         let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
-         ac.addAction(UIAlertAction(title: "OK", style: .default))
-         present(ac, animated: true)
-         } else {
-         let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
-         ac.addAction(UIAlertAction(title: "OK", style: .default))
-         present(ac, animated: true)
-         } */
     }
     
     //MARK: - Done image capture here
@@ -54,17 +45,24 @@ class FaceRecognitionViewController: UIViewController, UINavigationControllerDel
         
         imagePicker.dismiss(animated: true, completion: nil)
         
-        //httpServiceHelper = HttpServiceHelper();
-        //httpServiceHelper.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: "alessio", count: 4, url: BASE_URL + "doFaceRecognition")
-        
         let currentUsername = HttpServiceHelper.sharedInstance.username
-        HttpServiceHelper.sharedInstance.sendPhoto(myPhoto: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, username: currentUsername, count: 4, url: BASE_URL + END_POINT_FACE_RECOGNITION) { (response) in
+        let myPhoto = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        let imageData =  UIImageJPEGRepresentation(myPhoto, 0.2)!
+        
+        HttpServiceHelper.sharedInstance.sendData(myData: imageData , username: currentUsername, count: 4, url: BASE_URL + END_POINT_FACE_RECOGNITION, namingFile:nil) { (response) in
             
-            
+            if(response.status == SUCCESS_RESPONSE) {
+                self.performSegue(withIdentifier: "showDocumentSegue", sender: self)
+            }else{
+                let alert = UIAlertController(title: "Ops!", message: response.message, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    self.takePhoto()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
-
     /*
     // MARK: - Navigation
 

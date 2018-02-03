@@ -7,6 +7,9 @@ target 'biometricFaces' do
 
   # Pods for biometricFaces
   pod 'Alamofire', '~> 4.5'
+  pod 'SwiftyJSON','~> 4.0' 
+  pod 'ObjectMapper', '~> 3.1'
+
 
   target 'biometricFacesTests' do
     inherit! :search_paths

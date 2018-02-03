@@ -15,6 +15,12 @@
 		8B380A841FF39BA100ACB364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B380A821FF39BA100ACB364 /* LaunchScreen.storyboard */; };
 		8B380A8F1FF39BA100ACB364 /* biometricFacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B380A8E1FF39BA100ACB364 /* biometricFacesTests.swift */; };
 		8B380A9A1FF39BA100ACB364 /* biometricFacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B380A991FF39BA100ACB364 /* biometricFacesUITests.swift */; };
+		8B62850C2025BB86008DBCBC /* DocManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62850B2025BB86008DBCBC /* DocManagerViewController.swift */; };
+		8B6285102025EE0F008DBCBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62850F2025EE0F008DBCBC /* User.swift */; };
+		8B6285142025F04D008DBCBC /* DocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6285132025F04D008DBCBC /* DocTableViewCell.swift */; };
+		8B6285162025F3E1008DBCBC /* AddDocButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6285152025F3E1008DBCBC /* AddDocButtonTableViewCell.swift */; };
+		8B6285182025F7B5008DBCBC /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6285172025F7B5008DBCBC /* GenericResponse.swift */; };
+		8B62851A2025FDB5008DBCBC /* DetailDocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6285192025FDB5008DBCBC /* DetailDocViewController.swift */; };
 		8B69C050201BDC03003034C4 /* HttpServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */; };
 		8B6FA0A7201BD7170037BEC9 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FA0A6201BD7170037BEC9 /* TakePhotoViewController.swift */; };
 		8BD8D368201E70160022274F /* FaceRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD8D367201E70160022274F /* FaceRecognitionViewController.swift */; };
@@ -58,6 +64,13 @@
 		8B380A951FF39BA100ACB364 /* biometricFacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = biometricFacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B380A991FF39BA100ACB364 /* biometricFacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricFacesUITests.swift; sourceTree = "<group>"; };
 		8B380A9B1FF39BA100ACB364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B62850B2025BB86008DBCBC /* DocManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocManagerViewController.swift; sourceTree = "<group>"; };
+		8B62850D2025BC34008DBCBC /* biometricFaces.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = biometricFaces.entitlements; sourceTree = "<group>"; };
+		8B62850F2025EE0F008DBCBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8B6285132025F04D008DBCBC /* DocTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocTableViewCell.swift; sourceTree = "<group>"; };
+		8B6285152025F3E1008DBCBC /* AddDocButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocButtonTableViewCell.swift; sourceTree = "<group>"; };
+		8B6285172025F7B5008DBCBC /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		8B6285192025FDB5008DBCBC /* DetailDocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDocViewController.swift; sourceTree = "<group>"; };
 		8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceHelper.swift; sourceTree = "<group>"; };
 		8B6FA0A6201BD7170037BEC9 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		8BD8D367201E70160022274F /* FaceRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +113,8 @@
 		8B380A6D1FF39BA100ACB364 = {
 			isa = PBXGroup;
 			children = (
+				8B380A801FF39BA100ACB364 /* Assets.xcassets */,
+				8B380A791FF39BA100ACB364 /* AppDelegate.swift */,
 				8BD8D36A201E7C070022274F /* Constants.swift */,
 				8B380A781FF39BA100ACB364 /* biometricFaces */,
 				8B380A8D1FF39BA100ACB364 /* biometricFacesTests */,
@@ -123,11 +138,11 @@
 		8B380A781FF39BA100ACB364 /* biometricFaces */ = {
 			isa = PBXGroup;
 			children = (
+				8B62850E2025EDFB008DBCBC /* models */,
 				8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */,
+				8B62850D2025BC34008DBCBC /* biometricFaces.entitlements */,
 				8BD8D36C201E7C790022274F /* views */,
 				8B6FA0A5201BD6FE0037BEC9 /* controllers */,
-				8B380A791FF39BA100ACB364 /* AppDelegate.swift */,
-				8B380A801FF39BA100ACB364 /* Assets.xcassets */,
 				8B380A821FF39BA100ACB364 /* LaunchScreen.storyboard */,
 				8B380A851FF39BA100ACB364 /* Info.plist */,
 			);
@@ -152,12 +167,23 @@
 			path = biometricFacesUITests;
 			sourceTree = "<group>";
 		};
+		8B62850E2025EDFB008DBCBC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8B62850F2025EE0F008DBCBC /* User.swift */,
+				8B6285172025F7B5008DBCBC /* GenericResponse.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		8B6FA0A5201BD6FE0037BEC9 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8B380A7B1FF39BA100ACB364 /* ViewController.swift */,
 				8B6FA0A6201BD7170037BEC9 /* TakePhotoViewController.swift */,
 				8BD8D367201E70160022274F /* FaceRecognitionViewController.swift */,
+				8B62850B2025BB86008DBCBC /* DocManagerViewController.swift */,
+				8B6285192025FDB5008DBCBC /* DetailDocViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -166,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				8B380A7D1FF39BA100ACB364 /* Main.storyboard */,
+				8B6285132025F04D008DBCBC /* DocTableViewCell.swift */,
+				8B6285152025F3E1008DBCBC /* AddDocButtonTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -271,6 +299,11 @@
 					8B380A751FF39BA100ACB364 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					8B380A891FF39BA100ACB364 = {
 						CreatedOnToolsVersion = 9.2;
@@ -436,10 +469,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-biometricFaces/Pods-biometricFaces-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -488,7 +525,13 @@
 			files = (
 				8B380A7C1FF39BA100ACB364 /* ViewController.swift in Sources */,
 				8B6FA0A7201BD7170037BEC9 /* TakePhotoViewController.swift in Sources */,
+				8B62850C2025BB86008DBCBC /* DocManagerViewController.swift in Sources */,
+				8B6285182025F7B5008DBCBC /* GenericResponse.swift in Sources */,
+				8B62851A2025FDB5008DBCBC /* DetailDocViewController.swift in Sources */,
 				8B380A7A1FF39BA100ACB364 /* AppDelegate.swift in Sources */,
+				8B6285162025F3E1008DBCBC /* AddDocButtonTableViewCell.swift in Sources */,
+				8B6285142025F04D008DBCBC /* DocTableViewCell.swift in Sources */,
+				8B6285102025EE0F008DBCBC /* User.swift in Sources */,
 				8BD8D368201E70160022274F /* FaceRecognitionViewController.swift in Sources */,
 				8B69C050201BDC03003034C4 /* HttpServiceHelper.swift in Sources */,
 				8BD8D36B201E7C070022274F /* Constants.swift in Sources */,
@@ -658,10 +701,11 @@
 			baseConfigurationReference = EBE178E87AFFDF90F9EF5598 /* Pods-biometricFaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = biometricFaces/biometricFaces.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSBR4VCBZ8;
 				INFOPLIST_FILE = biometricFaces/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -675,10 +719,11 @@
 			baseConfigurationReference = F204B0E8284D7CD2684C70F4 /* Pods-biometricFaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = biometricFaces/biometricFaces.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSBR4VCBZ8;
 				INFOPLIST_FILE = biometricFaces/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
