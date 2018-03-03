@@ -2,8 +2,8 @@
 //  FaceRecognitionViewController.swift
 //  biometricFaces
 //
-//  Created by Alessio Campanelli on 28/01/18.
-//  Copyright © 2018 Alessio Campanelli. All rights reserved.
+//  Created by Me Developer on 28/01/18.
+//  Copyright © 2018 Me Developer. All rights reserved.
 //
 
 import UIKit

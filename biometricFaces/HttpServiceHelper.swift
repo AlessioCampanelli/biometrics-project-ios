@@ -2,8 +2,8 @@
 //  HttpServiceHelper.swift
 //  biometricFaces
 //
-//  Created by Alessio Campanelli on 26/01/18.
-//  Copyright © 2018 Alessio Campanelli. All rights reserved.
+//  Created by Me Developer on 26/01/18.
+//  Copyright © 2018 Me Developer. All rights reserved.
 //
 
 import UIKit
@@ -46,12 +46,12 @@ class HttpServiceHelper: NSObject {
                 upload.responseString { response in
                     print("respooonse: \(response)")
                     
-                    let genericResponse = GenericResponse(JSONString: response.result.value!)
-                    /*guard let genericResponse = GenericResponse(JSONString: response.result.value!) else {
-                        
-                        //throw Error.i
-                    } */
+                    if(response.result.value == nil){
+                        onCompletion(GenericResponse(JSONString: "{\"status\": \"KO\", \"message\":\"Errore di connessione\"}")!)
+                        return
+                    }
                     
+                    let genericResponse = GenericResponse(JSONString: response.result.value!)
                     onCompletion(genericResponse!)
                 }
                 
@@ -66,6 +66,11 @@ class HttpServiceHelper: NSObject {
         let parameters: Parameters = ["username": username]
         
         Alamofire.request(BASE_URL + END_POINT_GET_USER_DOCS, method: .get, parameters: parameters, encoding: URLEncoding.default).responseString { (response) in
+            
+            if(response.result.value == nil){
+                onCompletion(User(JSONString: "{\"status\": \"KO\", \"message\":\"Errore di connessione\", \"listDocument\": []}")!)
+                return
+            }
             
             let user = User(JSONString: response.result.value!)
             

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +46,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0I4-hB-wIP" kind="show" identifier="faceRecognitionSegue" id="xKe-xK-gNK"/>
+                                    <action selector="doLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieJ-cL-zEp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hQ-cS-vUG">
@@ -61,7 +60,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iMg-MY-ilu" kind="show" identifier="registerFaceSegue" action="showDetailViewController:sender:" id="rWv-ic-ycQ"/>
+                                    <action selector="configFaceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDt-CW-5Qa"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unlock" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-It-FgL">
@@ -100,6 +99,8 @@
                     <navigationItem key="navigationItem" id="IgV-li-FZI"/>
                     <connections>
                         <outlet property="usernameTextField" destination="B5o-Eg-gsH" id="1hg-QG-dkf"/>
+                        <segue destination="iMg-MY-ilu" kind="show" identifier="registerFaceSegue" id="kee-oW-8Fq"/>
+                        <segue destination="0I4-hB-wIP" kind="show" identifier="faceRecognitionSegue" id="NGR-45-kck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

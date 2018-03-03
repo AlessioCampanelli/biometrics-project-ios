@@ -2,8 +2,8 @@
 //  biometricFacesUITests.swift
 //  biometricFacesUITests
 //
-//  Created by Alessio Campanelli on 27/12/17.
-//  Copyright © 2017 Alessio Campanelli. All rights reserved.
+//  Created by Me Developer on 27/12/17.
+//  Copyright © 2017 Me Developer. All rights reserved.
 //
 
 import XCTest

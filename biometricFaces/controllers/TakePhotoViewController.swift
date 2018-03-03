@@ -2,8 +2,8 @@
 //  TakePhotoViewController.swift
 //  biometricFaces
 //
-//  Created by Alessio Campanelli on 26/01/18.
-//  Copyright © 2018 Alessio Campanelli. All rights reserved.
+//  Created by Me Developer on 26/01/18.
+//  Copyright © 2018 Me Developer. All rights reserved.
 //
 
 import UIKit
@@ -61,12 +61,24 @@ class TakePhotoViewController: UIViewController, UINavigationControllerDelegate,
         HttpServiceHelper.sharedInstance.sendData(myData: imageData, username: currentUsername, count: count, url: BASE_URL + endPoint, namingFile:nil) { (response) in
             
             if(self.count == 4) {   //photo for recognition face
-                let alert = UIAlertController(title: "Good!", message: "Now your face is registered!!", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                    self.dismiss(animated: true, completion: nil)
-                }))
-                self.present(alert, animated: true, completion: nil)
-                return;
+                
+                if(response.status == SUCCESS_RESPONSE) {
+                    
+                    let alert = UIAlertController(title: "Good!", message: "Now your face is registered!!", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                        self.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    return;
+                    
+                } else {
+                    let alert = UIAlertController(title: "Ops!", message: response.message, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                        
+                        self.takePhoto(self.buttonTakeASelfie)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
             
              let alert = UIAlertController(title: "Configuration", message: "photo n° \(self.count) correctly acquired. \n Take another photo please!", preferredStyle: UIAlertControllerStyle.alert)

@@ -138,8 +138,8 @@
 		8B380A781FF39BA100ACB364 /* biometricFaces */ = {
 			isa = PBXGroup;
 			children = (
-				8B62850E2025EDFB008DBCBC /* models */,
 				8B69C04F201BDC03003034C4 /* HttpServiceHelper.swift */,
+				8B62850E2025EDFB008DBCBC /* models */,
 				8B62850D2025BC34008DBCBC /* biometricFaces.entitlements */,
 				8BD8D36C201E7C790022274F /* views */,
 				8B6FA0A5201BD6FE0037BEC9 /* controllers */,
@@ -705,7 +705,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSBR4VCBZ8;
 				INFOPLIST_FILE = biometricFaces/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -723,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSBR4VCBZ8;
 				INFOPLIST_FILE = biometricFaces/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.testing.biometricFaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
